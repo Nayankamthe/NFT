@@ -34,19 +34,25 @@ function Header() {
                 Categary
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Footer">
-                <span className="fa fa-shoe-prints"></span>About
-              </Link>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/Owner">
                 <span className="fa fa-shoe-prints"></span>Owner
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/Footer">
+                <span className="fa fa-shoe-prints"></span>About
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/Setting">
                 <span className="fa fa-shoe-prints"></span>Settings
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/UserLogin">
+                <span className="fa fa-shoe-prints"></span>Sign In
               </Link>
             </li>
           </ul>

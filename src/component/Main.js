@@ -17,9 +17,14 @@ function Main() {
         <Link to={`/AuctionBid/${data.ProductToken}`}>
           <button className="btn btn-outline-primary my-1 ">Buy </button>
         </Link>
-        <div className="card-body ">
-          <h6 className="card-title">Mined by:{data.MineBy} </h6>
-          <h6 className=" card-subtitle">Name:{data.NameOfProduct}</h6>
+        <div className="card-body">
+          <div className="col-auto">
+            <h6 className="card-title">Mined by:{data.MineBy} </h6>
+            <h6 className=" card-sub-title">Name:{data.NameOfProduct}</h6>
+          </div>
+          <div className="col-2 ">
+            <h6 className="card-title">10</h6>
+          </div>
         </div>
       </div>
     );

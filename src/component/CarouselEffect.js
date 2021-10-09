@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Carousel from "react-bootstrap/Carousel";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const CarouselEffect = () => {
+  const history = useHistory();
+
   return (
     <>
       <div className="container-fluid">
@@ -21,7 +23,9 @@ const CarouselEffect = () => {
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
 
-                <button className="btn btn-outline-primary"> Explore</button>
+                <Link to="/Categary">
+                  <button className="btn btn-outline-primary"> Explore</button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,7 +37,9 @@ const CarouselEffect = () => {
               <Carousel.Caption>
                 <h5>Second slide label</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button className="btn btn-outline-primary"> Explore</button>
+                <Link to="/Categary">
+                  <button className="btn btn-outline-primary"> Explore</button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -48,7 +54,15 @@ const CarouselEffect = () => {
                   Praesent commodo cursus magna, vel scelerisque nisl
                   consectetur.
                 </p>
-                <button className="btn btn-outline-primary "> Explore</button>
+                {/* <button
+                  onClick={() => history.push("/explore")}
+                  className="btn btn-outline-primary "
+                >
+                  Explore
+                </button> */}
+                <Link to="/Categary">
+                  <button className="btn btn-outline-primary"> Explore</button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

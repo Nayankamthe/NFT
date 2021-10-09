@@ -9,6 +9,8 @@ import AuctionList from "./AuctionList";
 import AuctionBid from "./AuctionBid";
 import Setting from "./Setting";
 import CarouselEffect from "./CarouselEffect";
+import CreateNft from "./CreateNft";
+import UserLogin from "./UserLogin";
 
 const Routes = () => {
   return (
@@ -18,6 +20,8 @@ const Routes = () => {
       {/* <Route path="/Footer" component={Footer} /> */}
       <Route path="/Owner" component={Owner} />
       <Route path="/Setting" component={Setting} />
+      <Route path="/UserLogin" component={UserLogin} />
+      <Route path="/AuctionBid/:id/:Bid" component={Main} />
       <Route path="/Item/Owner" component={Owner} />
       <Route path="/Item/Transaction" component={Transaction} />
       <Route path="/Item/Item/Transaction" component={Transaction} />
@@ -26,6 +30,7 @@ const Routes = () => {
       <Route path="/AuctionBid/Owner" component={Owner} />
       <Route path="/Transaction" component={Transaction} />
       {/* <Route path="/Explore" component={Main} /> */}
+      <Route path="/Create" component={CreateNft} />
     </Switch>
   );
 };

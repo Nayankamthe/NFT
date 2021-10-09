@@ -10,14 +10,22 @@ import Main from "./Main";
 import Explore from "./Explore";
 import AuctionList from "./AuctionList";
 import Home from "./Home";
+import CreateNft from "./CreateNft";
+import UserLogin from "./UserLogin";
+import AuctionBid from "./AuctionBid";
+import Countdown from "./Countdown";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Routes />
+      {/* <Routes /> */}
+      {/* <Countdown /> */}
+      {/* <UserLogin /> */}
+
+      <CreateNft />
       {/* <Home /> */}
-      {/* <AutionBid /> */}
+      {/* <AuctionBid /> */}
       {/* <Main /> */}
       {/* <Explore /> */}
       {/* <AuctionList /> */}

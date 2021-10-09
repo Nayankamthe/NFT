@@ -4,7 +4,16 @@ import { useParams } from "react-router-dom";
 import products from "./Products";
 import { Link } from "react-router-dom";
 
+let bid;
 function AuctionBid() {
+  let textInput = React.createRef();
+
+  function handleClick() {
+    console.log(textInput.current.value);
+    bid = textInput.current.value;
+    console.log(bid);
+  }
+
   const { id } = useParams();
   return products
     .filter((data) => data.ProductToken === id)
@@ -78,15 +87,21 @@ function AuctionBid() {
                       <div className="row row-cols-2">
                         <div className="col">
                           <input
+                            ref={textInput}
                             type="text"
                             placeholder="Bid Price"
                             className="text-primary form-control"
                           />
                         </div>
                         <div className="col">
-                          <button className="btn btn-outline-primary form-control">
-                            Bid
-                          </button>
+                          <Link to={`/AuctionBid/${id}/`}>
+                            <button
+                              onClick={handleClick}
+                              className="btn btn-outline-primary form-control"
+                            >
+                              Bid
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </form>

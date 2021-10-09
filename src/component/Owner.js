@@ -51,6 +51,11 @@ function Owner() {
                   Transection Details
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Create">
+                  Create NFTS
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
