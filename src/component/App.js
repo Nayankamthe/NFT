@@ -20,10 +20,10 @@ function App() {
     <div className="App">
       <Header />
       {/* <Routes /> */}
-      {/* <Countdown /> */}
+      <Countdown />
       {/* <UserLogin /> */}
 
-      <CreateNft />
+      {/* <CreateNft /> */}
       {/* <Home /> */}
       {/* <AuctionBid /> */}
       {/* <Main /> */}
