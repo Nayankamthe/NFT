@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Routes /> */}
-      <Countdown />
+      <Routes />
+      {/* <Countdown /> */}
       {/* <UserLogin /> */}
 
       {/* <CreateNft /> */}
