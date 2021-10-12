@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link, useHistory } from "react-router-dom";
 
 const CarouselEffect = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <>

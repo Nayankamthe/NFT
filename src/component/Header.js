@@ -50,7 +50,7 @@ function Header() {
                 <span className="fa fa-shoe-prints"></span>Settings
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item position-absolute top-0 end-0 ">
               <Link className="nav-link" to="/UserLogin">
                 <span className="fa fa-shoe-prints"></span>Sign In
               </Link>

@@ -4,7 +4,7 @@ import "./bootstrap.min.css";
 const Footer = () => {
   return (
     <>
-      <div className="card container-fluid bg-dark">
+      <div className="card container-fluid bg-dark position-sticky bottom-0 end-0">
         <div className="container-fluid" style={{ height: "50px" }}>
           <h3 className=" text-center text-white">
             {" "}

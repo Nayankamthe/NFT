@@ -9,7 +9,7 @@ function Countdown() {
 
   let interval = useRef();
   const startTimer = () => {
-    const countdownDate = new Date("Nov 30, 2021 00:00:00").getTime();
+    const countdownDate = new Date("Oct 13, 2021 00:00:00").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
@@ -20,8 +20,9 @@ function Countdown() {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      if (distance > 0) {
+      if (distance < 0) {
         //   stop our timer
+
         clearInterval(interval.current);
       } else {
         //update timer
@@ -44,23 +45,7 @@ function Countdown() {
 
   return (
     <div className="container">
-      <section className="timer">
-        <section>
-          <p>{timerDays}</p>
-        </section>
-        <span>:</span>
-        <section>
-          <p>{timerHours}</p>
-        </section>
-        <span>:</span>
-        <section>
-          <p>{timerMinutes}</p>
-        </section>
-        <span>:</span>
-        <section>
-          <p>{timerSeconds}</p>
-        </section>
-      </section>
+      <div className="row p-md-4"></div>
     </div>
   );
 }

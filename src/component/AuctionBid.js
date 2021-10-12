@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState, useEffect, createRef } from "react";
 import ReactDOM from "react-dom";
 import { useParams } from "react-router-dom";
 import products from "./Products";
 import { Link } from "react-router-dom";
 
-let bid;
 function AuctionBid() {
-  let textInput = React.createRef();
+  var bid;
+  var textInput = React.createRef();
+  var [bidvalue, setbidvalue] = useState([]);
 
-  function handleClick() {
-    console.log(textInput.current.value);
-    bid = textInput.current.value;
-    console.log(bid);
-  }
+  useEffect(() => {
+    console.log("hiiii");
+    localStorage.setItem("bidArray", JSON.stringify(bidvalue));
+    console.log("hello");
+  }, [bidvalue]);
+
+  const handleClick = () => {
+    var bid = textInput.current.value;
+    // console.log("bid", bid);
+    setbidvalue([...bidvalue, bid]);
+  };
 
   const { id } = useParams();
   return products
@@ -94,7 +101,7 @@ function AuctionBid() {
                           />
                         </div>
                         <div className="col">
-                          <Link to={`/AuctionBid/${id}/`}>
+                          <Link to={`/bid/${id}`}>
                             <button
                               onClick={handleClick}
                               className="btn btn-outline-primary form-control"

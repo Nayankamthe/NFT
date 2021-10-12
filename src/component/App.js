@@ -29,6 +29,9 @@ function App() {
       {/* <Main /> */}
       {/* <Explore /> */}
       {/* <AuctionList /> */}
+      {/* <div className="position-sticky bottom-0 end-0">
+        <Footer />
+      </div> */}
       <Footer />
     </div>
   );

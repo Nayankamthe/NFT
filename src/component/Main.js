@@ -2,9 +2,27 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Owner from "./Owner";
 import { Link } from "react-router-dom";
+
 import products from "./Products";
+import { useParams } from "react-router-dom";
+
 function Main() {
+  const { id } = useParams();
+  console.log("I", id);
+  var getbasevalue = JSON.parse(localStorage.getItem("setbasevalue"));
+  console.log(getbasevalue);
+
+  // var a = [];
+  // a = JSON.parse(localStorage.getItem("bidArray"));
+  // console.log(a);
+
   const items = products.map((data) => {
+    const myfunction = () => {
+      if (data.ProductToken === id) {
+        var a = JSON.parse(localStorage.getItem("bid"));
+      }
+      return Math.max(a);
+    };
     return (
       <div className="card p-md-3">
         <img
@@ -15,15 +33,18 @@ function Main() {
           className="card-img-top"
         />
         <Link to={`/AuctionBid/${data.ProductToken}`}>
-          <button className="btn btn-outline-primary my-1 ">Buy </button>
+          <button className="btn btn-outline-primary my-1 ">Bid </button>
         </Link>
         <div className="card-body">
-          <div className="col-auto">
-            <h6 className="card-title">Mined by:{data.MineBy} </h6>
-            <h6 className=" card-sub-title">Name:{data.NameOfProduct}</h6>
-          </div>
-          <div className="col-2 ">
-            <h6 className="card-title">10</h6>
+          <div className="row">
+            <div className="col-8">
+              <h6 className="card-title">Mined by:{data.MineBy} </h6>
+              <h6 className=" card-sub-title">Name:{data.NameOfProduct}</h6>
+            </div>
+            <div className="col-auto">
+              <h6 className="card-title">Ehter:{getbasevalue}</h6>
+              <h6 className="card-title">{myfunction()}</h6>
+            </div>
           </div>
         </div>
       </div>

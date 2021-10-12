@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, createRef } from "react";
 import ReactDOM from "react-dom";
 import "./bootstrap.min.css";
 import { useParams } from "react-router-dom";
@@ -7,6 +7,13 @@ import { Link } from "react-router-dom";
 
 function AuctionList() {
   const { id } = useParams();
+  var setInput = React.createRef();
+
+  const handleClick = () => {
+    var setvalue = setInput.current.value;
+    localStorage.setItem("setbasevalue", setvalue);
+  };
+
   return products
     .filter((data) => data.ProductToken === id)
     .map((data) => {
@@ -40,13 +47,16 @@ function AuctionList() {
                       >
                         Set Price
                       </label>
-                      <input type="text" />
+                      <input type="text" ref={setInput} placeholder="Set Bid" />
                     </div>
 
                     <div className="form-group mx-5">
-                      <Link to={`/AuctionBid/${data.ProductToken}`}>
-                        <button className="btn btn-outline-primary">
-                          List
+                      <Link to={`/Categary/${id}`}>
+                        <button
+                          className="btn btn-outline-primary"
+                          onClick={handleClick}
+                        >
+                          Set
                         </button>
                       </Link>
                       <button className="btn btn-outline-primary visually-hidden-focusable">

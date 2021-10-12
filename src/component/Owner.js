@@ -16,7 +16,9 @@ function Owner() {
           className="card-img-top"
         />
         <Link to={`/ItemDetails/${data.ProductToken}`}>
-          <button className="btn btn-outline-primary my-1 ">List </button>
+          <button className="btn btn-outline-primary my-1 ">
+            Set Auction{" "}
+          </button>
         </Link>
         <div className="card-body cardti">
           <h6 className="card-title">Mined by:{data.MineBy} </h6>
@@ -51,11 +53,11 @@ function Owner() {
                   Transection Details
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/Create">
                   Create NFTS
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
